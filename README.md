@@ -26,9 +26,9 @@ I have also left comments and TODOs throughout the code to assist with the revie
 
 ## How to Run
 
-1.  **Install dependencies:**
+1.  **Start the project:**
     ```bash
-    composer install
+    docker compose up -d
     ```
 
 2.  **Run the parser:**
