@@ -1,0 +1,12 @@
+services:
+  App\Command\ParseFileCommand:
+    public: true
+    arguments:
+      - '@Common\Parser\Service\FileIterator\FileIterator'
+
+  Common\Parser\Service\Parser\CsvParser: ~
+
+  Common\Parser\Service\FileIterator\FileIterator:
+    arguments:
+      - !service_locator
+        CSV: '@Common\Parser\Service\Parser\CsvParser'
